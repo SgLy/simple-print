@@ -1,0 +1,3 @@
+[submodule "print_app/static/flatui"]
+	path = print_app/static/flatui
+	url = git@github.com:designmodo/Flat-UI
