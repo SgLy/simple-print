@@ -3,7 +3,7 @@ from django.http import HttpResponse
 import os
 
 def code(request):
-    return render(request, 'print_code.html')
+    return render(request, 'code.html')
 
 def print_code(request):
     if request.method == 'POST':
@@ -25,5 +25,15 @@ def print_code(request):
             return HttpResponse('gg')
 
 
-def print_webpage(request):
-    return render(request, 'print_webpage.html')
+def web(request):
+    return render(request, 'webpage.html')
+
+def print_web(request):
+    if request.method == 'POST':
+        url = request.POST['url'].split('\n')
+        piece = int(request.POST['piece'])
+        res = ''
+        for t in range(piece):
+            for i in url:
+                res += 'print ' + i + '<br/>'
+        return HttpResponse(res)

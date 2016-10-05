@@ -20,6 +20,7 @@ from print_app import views as print_app_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', print_app_views.code),
-    url(r'^webpage/', print_app_views.print_webpage),
+    url(r'^web/', print_app_views.web),
     url(r'^print_code$', print_app_views.print_code),
+    url(r'^print_web$', print_app_views.print_web),
 ]

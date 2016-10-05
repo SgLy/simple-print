@@ -12,18 +12,23 @@
         </style>
 {% include "navbar.html" %}
         <div class="container" align="center" style="width:60%; margin:0 auto">
-            <form action="/post" method="get" class="form-group">
-                <h5 align="left">Input a URL:</h5>
-                <input type="url" value="http://" class="form-control url-input"/>
+            <form action="/print_web" method="post" class="form-group">{% csrf_token %}
+                <h5 align="left">Input URLs, one per line:</h5>
+                <textarea name="url" class="form-control codearea" rows="20"></textarea>
                 <br>
                 <style>
-                    .url-input {
+                    .codearea {
                         font-family: Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
                         color: #666;
                         font-size: 12px;
                     }
                 </style>
-                <input class="btn btn-primary btn-block" type="submit" value="Print">
+                <div class="input-group">
+                    <input name="piece" type="number" class="form-control">
+                    <span class="input-group-btn" style="width: 80%;">
+                        <input class="btn btn-inverse form-control" type="submit" value="Print">
+                    </span>
+                </div>
             </form>
         </div>
     </body>
