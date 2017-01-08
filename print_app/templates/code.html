@@ -12,18 +12,18 @@
         </style>
 {% include "navbar.html" %}
         <div class="container" align="center" style="width:60%; margin:0 auto">
-            <form action="/print_code" method="post" class="form-group">{% csrf_token %}
+            <form action="/code" method="post" class="form-group">{% csrf_token %}
                 <h5 align="left">Choose a syntax:</h5>
                 <select class="form-control select select-inverse mrs mbm" data-toggle="select" align="left" name="syntax">
-                    <option value="">Plain Text</option>
                     <option value="c++">C++</option>
                     <option value="java">Java</option>
                     <option value="pascal">Pascal</option>
                     <option value="python">Python</option>
+                    <option value="">Plain Text</option>
                 </select>
                 <br>
                 <h5 align="left">Your code to print:</h5> </tr>
-                <textarea class="form-control codearea flat inverse" rows="20" cols="80" name="content"></textarea><br>
+                <textarea class="form-control codearea inverse" rows="20" cols="80" name="content"></textarea><br>
                 <style>
                     .codearea {
                         font-family: Monaco, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;

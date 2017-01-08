@@ -1,8 +1,8 @@
+# Ignore uwsgi config file
+uwsgi.ini
+
 # Ignore Database
 db.sqlite3
-
-# TEMP: ignore global static files
-/static/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -18,9 +18,11 @@ from django.contrib import admin
 from print_app import views as print_app_views
 
 urlpatterns = [
+    url(r'^$', print_app_views.code, name='code'),
+    url(r'^login$', print_app_views.login, name='login'),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', print_app_views.code),
-    url(r'^web/', print_app_views.web),
-    url(r'^print_code$', print_app_views.print_code),
-    url(r'^print_web$', print_app_views.print_web),
+    url(r'^code$', print_app_views.code),
+    #url(r'^web/', print_app_views.web),
+    #url(r'^print_code$', print_app_views.print_code),
+    #url(r'^print_web$', print_app_views.print_web),
 ]
